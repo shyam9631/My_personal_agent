@@ -12,7 +12,10 @@ import config
 from tools.gmail_tool import get_recent_emails
 from tools.search_tool import web_search
 
-client = Groq(api_key=config.GROQ_API_KEY)
+client = OpenAI(
+    api_key=config.GEMINI_API_KEY,
+    base_url="https://generativelanguage.googleapis.com/v1beta/openai/",
+)
 
 SYSTEM_PROMPT = """You are Shyam's personal assistant.
 You can check his recent emails and search the web for research.

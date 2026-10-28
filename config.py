@@ -23,9 +23,9 @@ META_VERIFY_TOKEN = os.getenv("META_VERIFY_TOKEN", "")
 # Your own WhatsApp number in international format, no + or spaces, e.g. 919876543210
 META_RECIPIENT_NUMBER = os.getenv("META_RECIPIENT_NUMBER", "")
 
-# --- Groq (free LLM API, very fast) ---
-GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
-GROQ_MODEL = "openai/gpt-oss-120b"  
+# --- Gemini ---
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
+GEMINI_MODEL = "gemini-2.5-flash"
 
 # --- Gmail ---
 # credentials.json downloaded from Google Cloud Console (OAuth client, Desktop app type)
