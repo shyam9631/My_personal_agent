@@ -25,7 +25,7 @@ META_RECIPIENT_NUMBER = os.getenv("META_RECIPIENT_NUMBER", "")
 
 # --- Gemini ---
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
-GEMINI_MODEL = "gemini-2.5-flash"
+GEMINI_MODEL = "gemini-3.6-flash"
 
 # --- Gmail ---
 # credentials.json downloaded from Google Cloud Console (OAuth client, Desktop app type)

@@ -6,7 +6,7 @@ This is the "brain" — everything else (Telegram, scheduler) calls into this.
 """
 import json
 import re
-from groq import Groq, BadRequestError
+from openai import OpenAI, BadRequestError
 
 import config
 from tools.gmail_tool import get_recent_emails
@@ -106,7 +106,7 @@ def _extract_fake_tool_call(text):
 
 def _call_groq(messages):
     return client.chat.completions.create(
-        model=config.GROQ_MODEL,
+        model=config.GEMINI_MODEL,
         messages=messages,
         tools=TOOLS,
         tool_choice="auto",
@@ -179,7 +179,7 @@ def run_agent(user_message, history=None):
 
         try:
             followup = client.chat.completions.create(
-                model=config.GROQ_MODEL,
+                model=config.GEMINI_MODEL,
                 messages=messages,
             )
             final_text = followup.choices[0].message.content
